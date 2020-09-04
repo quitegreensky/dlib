@@ -212,7 +212,7 @@ namespace dlib
         return predictor;
     }
 
-    inline void train_shape_predictor (
+    inline shape_predictor train_shape_predictor (
         const std::string& dataset_filename,
         const std::string& predictor_output_filename,
         const shape_predictor_training_options& options
@@ -228,6 +228,8 @@ namespace dlib
 
         if (options.be_verbose)
             std::cout << "Training complete, saved predictor to file " << predictor_output_filename << std::endl;
+        
+        return predictor;
     }
 
 // ----------------------------------------------------------------------------------------
